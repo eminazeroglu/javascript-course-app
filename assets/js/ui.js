@@ -1,4 +1,8 @@
 class UI {
+    /**
+     * Yeni kursun UI tərəfə əlavə
+     * edilməsi
+     */
     addCourseToList(course) {
         const list = document.getElementById("course-list");
         let html = `
@@ -17,17 +21,23 @@ class UI {
         `;
         list.innerHTML += html;
     }
-
+    /**
+     * UI tərəfdə form-un təmizlənməsi
+     */
     clearForm(formElement) {
         formElement.name.value = "";
         formElement.teacher.value = "";
         formElement.image.value = "";
     }
-
+    /**
+     * UI tərəfdə kursun silinməsi
+     */
     deleteList(element) {
         element.closest("tr").remove();
     }
-
+    /**
+     * UI tərəfdə bildirişin göstərilməsi
+     */
     alert(type, message) {
         let alert = `
             <div class="alert alert-${type}">${message}</div>
