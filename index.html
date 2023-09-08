@@ -1,13 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course App</title>
-</head>
-<body>
-    
-    <script src="./assets/js/app.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Course App</title>
+        <link rel="stylesheet" href="./assets/css/app.css" />
+    </head>
+    <body>
+        <div class="container">
+            
+
+            <div class="head">
+                <h1>Kurs Layihəsi</h1>
+            </div>
+
+            <div class="flex gap-40">
+                <form class="form-content flex-1" id="course-form">
+                    <div class="form-control">
+                        <label class="form-label">Kursun adı</label>
+                        <input type="text" name="name" class="form-element" />
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label">Təlimçi</label>
+                        <input
+                            type="text"
+                            name="teacher"
+                            class="form-element"
+                        />
+                    </div>
+                    <div class="form-control">
+                        <label class="form-label">Şəkil</label>
+                        <input type="text" name="image" class="form-element" />
+                    </div>
+                    <div class="flex justify-end">
+                        <button class="btn btn-blue">Yadda Saxla</button>
+                    </div>
+                </form>
+
+                <div class="table-content flex-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Şəkil</th>
+                                <th>Kursun adı</th>
+                                <th>Təlimçi</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="course-list"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <script src="./assets/js/ui.js"></script>
+        <script src="./assets/js/course.js"></script>
+        <script src="./assets/js/storage.js"></script>
+        <script src="./assets/js/app.js"></script>
+    </body>
 </html>
